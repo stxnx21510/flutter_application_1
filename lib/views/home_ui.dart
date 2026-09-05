@@ -1,10 +1,12 @@
 // ignore_for_file: sort_child_properties_last
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/views/login_ui.dart';
 
-class HomeUi extends StatelessWidget {
-  const HomeUi({super.key});
-
+ 
+class HomeUI extends StatelessWidget {
+  const HomeUI({super.key});
+ 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,18 +15,17 @@ class HomeUi extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(
-              height: 120.0,
+              height: 100.0,
             ),
             Image.asset(
               'assets/images/img_dev1.png',
-              height: 250.5,
+              height: 270.5,
             ),
             SizedBox(
               height: 80.0,
             ),
             Image.asset(
               'assets/images/img_dev2.png',
-              
             ),
             SizedBox(
               height: 25.0,
@@ -35,16 +36,16 @@ class HomeUi extends StatelessWidget {
                 Text(
                   'SAU',
                   style: TextStyle(
-                    fontSize: 40.0,
+                    fontSize: 35.0,
                     fontWeight: FontWeight.bold,
-                    color: const Color.fromARGB(255, 160, 222, 247),
+                    color: const Color.fromARGB(255, 58, 58, 58),
                   ),
                 ),
                 Text(
                   'Developer',
                   style: TextStyle(
-                    fontSize: 40.0,       
-                    color: const Color.fromARGB(255, 235, 163, 229),
+                    fontSize: 35.0,
+                    color: const Color.fromARGB(255, 58, 58, 58),
                   ),
                 ),
               ],
@@ -53,50 +54,69 @@ class HomeUi extends StatelessWidget {
               height: 25.0,
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                //เปิดไปหน้า LoinUI() แบบย้อนกลับได้
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => LoginUI(),
+                  ),
+                );
+              },
               child: Text(
                 'Login',
                 style: TextStyle(
                   color: Colors.white,
                 ),
               ),
+              style: ElevatedButton.styleFrom(
+                fixedSize: Size(
+                  380,
+                  65,
+                ),
+                backgroundColor: Colors.black,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+              ),
+            ),
             SizedBox(
               height: 18.0,
             ),
             OutlinedButton(
               onPressed: () {},
-
-
               child: Text(
-                'Register'),
-                style: OutlinedButton.styleFrom(
-                  fixedSize: Size(
-                    380,
-                    55,
-                  ),
-                  backgroundColor: Colors.black,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10.0),
-                  )
+                'Register',
+                style: TextStyle(
+                  color: Colors.black,
                 ),
               ),
-            SizedBox(
-              height: 18.0,
+              style: OutlinedButton.styleFrom(
+                fixedSize: Size(
+                  380,
+                  65,
+                ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
               ),
+            ),
+            SizedBox(
+              height: 98.0,
+            ),
             Text(
-              'Created by STXNX SAU',
-                   style: TextStyle(
-                color: Colors.grey,
-                fontSize: 17.0,
+              'Created by NinniN SAU',
+              style: TextStyle(
+                color: const Color.fromARGB(255, 29, 197, 177),
+                fontSize: 17,
                 fontWeight: FontWeight.bold,
-
               ),
             ),
             Text(
-              'มหาวิทยาลัยเอเชีย',
+              'มหาวิทยาลัยเอเชียอาคเนย์',
               style: TextStyle(
-                color: Colors.grey,
-                fontSize: 17.0,
+                color: const Color.fromARGB(255, 29, 197, 177),
+                fontSize: 17,
                 fontWeight: FontWeight.bold,
               ),
             ),

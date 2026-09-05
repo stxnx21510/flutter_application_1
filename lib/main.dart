@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/views/home_ui.dart';
+
 import 'package:google_fonts/google_fonts.dart';
+ 
 //-----------------------------------------------
  
 void main() {
@@ -26,7 +28,7 @@ class _FlutterIot659FristProjectState extends State<FlutterIot659FristProject> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false, //ซ่อนป้ายแบนเนอร์ทีมุมขวาบน
-      home: HomeUi(), //เรียกหน้าจอ
+      home: HomeUI(), //เรียกหน้าจอ
       theme: ThemeData(
         //ให้เลือกใช้ font จาก google font ณ ที่นี้อ.ใช้ฟอนต์ kanit
         textTheme: GoogleFonts.kanitTextTheme(
@@ -36,3 +38,4 @@ class _FlutterIot659FristProjectState extends State<FlutterIot659FristProject> {
     );
   }
 }
+ 
